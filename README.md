@@ -1,4 +1,4 @@
-O365-jQuery-CORS
+Office 365 CORS Sample for jQuery
 ====================
 This sample demonstrates the use of ADAL for JavaScript for securing an single-page app written independently of any frameworks. Additionally, this sample shows how to set up ADAL JS to make HTTP requests to the Office 365 APIs, as well as how to use CORS to execute a request. 
 
@@ -82,4 +82,6 @@ The key files containing authentication logic are the following:
 
 **index.html** - Contains a reference to the adal.js CDN.
    
+## Copyright
+Copyright (c) 2015 Microsoft. All rights reserved.
 
