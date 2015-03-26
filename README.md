@@ -15,7 +15,7 @@ Getting started is simple!  To run this sample you will need:
 
 Every Azure subscription has an associated Azure Active Directory tenant.  If you don't already have an Azure subscription, you can get a free subscription by signing up at [http://www.windowsazure.com](http://www.windowsazure.com).  All of the Azure AD features used by this sample are available free of charge.
 
-### Step 1:  Clone or download this repository
+### Step 1:  Clone or download this repository 
 
 From your shell or command line:
 `git clone https://github.com/OfficeDev/O365-jQuery-CORS.git`
