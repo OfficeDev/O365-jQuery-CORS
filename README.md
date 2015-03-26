@@ -72,7 +72,7 @@ You can trigger the sign-in experience by either clicking on the sign-in link on
 
 ## About the Code
 
-The key files containing authentication logic are the following:
+The key files containing authentication and Office 365 API logic are the following:
 
 **app.js** - Provides the app configuration values used by ADAL for driving protocol interactions with AAD, indicates which routes should not be accessed without previous authentication, issues login and logout requests to Azure AD, handles both successful and failed authentication callbacks from Azure AD, and displays information about the user received in the id_token.
 
