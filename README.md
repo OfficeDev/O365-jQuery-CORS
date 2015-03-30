@@ -1,6 +1,6 @@
 Office 365 CORS Sample for jQuery
 ====================
-This sample demonstrates the use of ADAL for JavaScript for securing an single-page app written independently of any frameworks. Additionally, this sample shows how to set up ADAL JS to make HTTP requests to the Office 365 APIs, as well as how to use CORS to execute a request. 
+This sample demonstrates how to use Azure Active Directory Authentication Library (ADAL) for JavaScript to secure a single-page app written independently of any frameworks. Additionally, this sample shows how to set up ADAL JS to make HTTP requests to the Office 365 APIs, as well as how to use CORS to execute a request. 
 
 ADAL for JavaScript is an open source library.  For distribution options, source code, and contributions, check out the ADAL JS repo at https://github.com/AzureAD/azure-activedirectory-library-for-js.
 
@@ -23,9 +23,9 @@ From your shell or command line:
 ### Step 2:  Register the sample with your Azure Active Directory tenant
 
 1. Sign in to the [Azure management portal](https://manage.windowsazure.com).
-2. Click on **Active Directory** in the left hand nav.
+2. Click **Active Directory** in the left hand nav.
 3. Click the directory tenant where you wish to register the sample application.
-4. Click the **Applications** tab.
+4. Select the **Applications** tab.
 5. In the drawer, click **Add**.
 6. Click **Add an application my organization is developing**.
 7. Enter a friendly name for the application, for example "O365-jQuery-CORS", select **Web Application and/or Web API**, and click the arrow to continue.
@@ -48,15 +48,15 @@ All done!  Before moving on to the next step, you need to find the Client ID of 
 
 By default, applications provisioned in Azure AD are not enabled to use the OAuth2 implicit grant. In order to run this sample, you need to explicitly opt in.
 
-1. From the former steps, your browser should still be on the Azure Management Portal - and specifically, displaying the **Configure** tab of your application's entry.
-2. Using the **Manage Manifest** button in the drawer, download the manifest file for the application and save it to your computer.
+1. In the [Azure Management Portal](https://manage.windowsazure.com), select the **Configure** tab for your application’s entry.
+2. Use the **Manage Manifest** button in the drawer to download the manifest file for the application and save it to your computer.
 3. Open the manifest file with a text editor. Search for the `oauth2AllowImplicitFlow` property. You will find that it is set to `false`; change it to `true` and save the file.
-4. Using the **Manage Manifest** button, upload the updated manifest file. **Save** the configuration of the app.
+4. Use the **Manage Manifest** button to upload the updated manifest file and then click **Save** to save the app configuration. 
 
 ### Step 4:  Configure the sample to use your Azure Active Directory tenant
 
 1. Open the solution in Visual Studio 2013.
-2. Open `config.js` located in *App/Scripts*. 
+2. Find the *App/Scripts* folder and open `config.js`. 
     * Replace the value of `tenant` with your AAD tenant name.
     * Replace the value of `clientId` with the Client ID from the Azure Management Portal.
 
@@ -68,15 +68,15 @@ By default, applications provisioned in Azure AD are not enabled to use the OAut
 
 You can trigger the sign-in experience by either clicking on the sign-in link on the top right corner, or by clicking the Files or User tab.
 
-**Note** This sample will not work in Internet Explorer. Please use a different browser. ADAL.js uses an iframe to get CORS API tokens for resources other than the SPA's own backend. These iframe requests require access to the browser's cookies to authenticate with Azure Active Directory. Unfortunately, cookies are not accessible to IE when the app is running in localhost.
+**Note** This sample will not work in Internet Explorer. Please use a different browser, such as Google Chrome. ADAL.js uses an iframe to get CORS API tokens for resources other than the SPA's own backend. These iframe requests require access to the browser's cookies to authenticate with Azure Active Directory. Unfortunately, cookies are not accessible to Internet Explorer when the app is running in localhost.
 
 ## About the Code
 
 The key files containing authentication and Office 365 API logic are the following:
 
-**app.js** - Provides the app configuration values used by ADAL for driving protocol interactions with AAD, indicates which routes should not be accessed without previous authentication, issues login and logout requests to Azure AD, handles both successful and failed authentication callbacks from Azure AD, and displays information about the user received in the id_token.
+**app.js** - Provides the app configuration values used by ADAL for driving protocol interactions with AAD, indicates which routes should not be accessed without previous authentication, issues login and logout requests to Azure AD, handles both successful and failed authentication callbacks from Azure AD, and displays information about the user received in the **id_token**.
 
-**filesApiCtrl.js**- Shows how to take advantage of the acquireToken() method in ADAL.js to get a token for accessing a resource, as well as how to make a CORS request to the Office 365 Files API. 
+**filesApiCtrl.js**- Shows how to take advantage of the **acquireToken()** method in ADAL.js to get a token for accessing a resource, as well as how to make a CORS request to the Office 365 Files API. 
 
 **userDataCtrl.js** - Shows how to extract user information from the cached id_token.
 
