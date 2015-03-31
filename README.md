@@ -20,7 +20,11 @@ Every Azure subscription has an associated Azure Active Directory tenant.  If yo
 From your shell or command line:
 `git clone https://github.com/OfficeDev/O365-jQuery-CORS.git`
 
-### Step 2:  Register the sample with your Azure Active Directory tenant
+### Step 2: Set up your Office 365 development environment
+
+In order to run this sample, you'll need an Office 365 Developer Site associated with your Azure Active Directory tenant. If you already have this configured, continue on to Step 3. However, if you don't, refer to [Set up your Office 365 development environment](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment) on MSDN to get set up.
+
+### Step 3:  Register the sample with your Azure Active Directory tenant
 
 1. Sign in to the [Azure management portal](https://manage.windowsazure.com).
 2. Click **Active Directory** in the left hand nav.
@@ -44,7 +48,7 @@ All done!  Before moving on to the next step, you need to find the Client ID of 
 2. Find the Client ID value and copy it to the clipboard.
 
 
-### Step 3:  Enable the OAuth2 implicit grant for your application
+### Step 4:  Enable the OAuth2 implicit grant for your application
 
 By default, applications provisioned in Azure AD are not enabled to use the OAuth2 implicit grant. In order to run this sample, you need to explicitly opt in.
 
@@ -53,14 +57,14 @@ By default, applications provisioned in Azure AD are not enabled to use the OAut
 3. Open the manifest file with a text editor. Search for the `oauth2AllowImplicitFlow` property. You will find that it is set to `false`; change it to `true` and save the file.
 4. Use the **Manage Manifest** button to upload the updated manifest file and then click **Save** to save the app configuration. 
 
-### Step 4:  Configure the sample to use your Azure Active Directory tenant
+### Step 5:  Configure the sample to use your Azure Active Directory tenant
 
 1. Open the solution in Visual Studio 2013.
 2. Find the *App/Scripts* folder and open `config.js`. 
     * Replace the value of `tenant` with your AAD tenant name.
     * Replace the value of `clientId` with the Client ID from the Azure Management Portal.
 
-### Step 5:  Run the sample
+### Step 6:  Run the sample
 
 * Clean the solution 
 * Rebuild the solution
