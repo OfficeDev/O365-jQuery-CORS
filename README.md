@@ -24,6 +24,8 @@ From your shell or command line:
 
 In order to run this sample, you'll need an Office 365 Developer Site associated with your Azure Active Directory tenant. If you already have this configured, continue on to Step 3. However, if you don't, refer to [Set up your Office 365 development environment](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment) on MSDN to get set up.
 
+Return to these instructions after your Office 365 tenant is associated with your Azure tenant.
+
 ### Step 3:  Register the sample with your Azure Active Directory tenant
 
 1. Sign in to the [Azure management portal](https://manage.windowsazure.com).
