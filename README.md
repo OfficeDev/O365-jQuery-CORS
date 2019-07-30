@@ -1,16 +1,7 @@
----
-page_type: sample
-products:
-- office-sp
-- office-365
-languages:
-- javascript
-extensions:
-  contentType: samples
-  createdDate: 3/26/2015 2:17:27 PM
----
-Office 365 CORS Sample for jQuery
-====================
+# [ARCHIVED] Office 365 CORS Sample for jQuery
+
+**Note:** This repo is archived and no longer actively maintained. Security vulnerabilities may exist in the project, or its dependencies. If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Do not use this project as the starting point of a production Office Add-in. Always start your production code by using the Office/SharePoint development workload in Visual Studio, or the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office), and follow security best practices as you develop the add-in.
+
 This sample demonstrates how to use Azure Active Directory Authentication Library (ADAL) for JavaScript to secure a single-page app written independently of any frameworks. Additionally, this sample shows how to set up ADAL JS to make HTTP requests to the Office 365 APIs, as well as how to use CORS to execute a request. 
 
 ADAL for JavaScript is an open source library.  For distribution options, source code, and contributions, check out the ADAL JS repo at https://github.com/AzureAD/azure-activedirectory-library-for-js.
